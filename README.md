@@ -75,14 +75,18 @@ Before / after chips (64 m, 0.5 m) of the strongest detections among the test po
 Aleppo (seen site), first and last usable scene:
 
 ![](figures/aleppo/01_construction_S0105.png)
+![](figures/aleppo/02_construction_S0247.png)
 ![](figures/aleppo/05_destruction_S0126.png)
 ![](figures/aleppo/06_soil_sealing_S0156.png)
+![](figures/aleppo/07_soil_sealing_S0174.png)
 
 Herat (unseen city, 2020 → 2023), overview of the 878 detections and three examples:
 
 ![](figures/herat/00_overview.png)
 ![](figures/herat/01_construction_H04378.png)
+![](figures/herat/02_construction_H06475.png)
 ![](figures/herat/05_destruction_H00873.png)
+![](figures/herat/06_destruction_H00605.png)
 ![](figures/herat/08_soil_sealing_H05950.png)
 
 ## 6. Evaluation code
