@@ -68,7 +68,24 @@ python -c "import numpy as np; E=np.load('work/emb_dinov3sat_aug.npz'); np.savez
 
 `train_final.py` fits the three pair-model seeds, computes out-of-fold pair scores for every training point, and fits the tree ensemble on hand-made + encoder + pair-score features; the saved file carries everything `predict_final.py` needs. The `slurm/` wrappers (`prep`, `embed`, `train_final`, `eval`) run the same commands under SLURM; edit the account/QOS lines for another cluster.
 
-## 5. Evaluation code
+## 5. Qualitative examples
+
+Before / after chips (64 m, 0.5 m) of the strongest detections among the test points, predicted class and score on the box. No labels exist for these points, so they are predictions, not verified changes. Made with `tools/detection_patches.py`; more in `figures/`.
+
+Aleppo (seen site), first and last usable scene:
+
+![](figures/aleppo/01_construction_S0105.png)
+![](figures/aleppo/05_destruction_S0126.png)
+![](figures/aleppo/06_soil_sealing_S0156.png)
+
+Herat (unseen city, 2020 → 2023), overview of the 878 detections and three examples:
+
+![](figures/herat/00_overview.png)
+![](figures/herat/01_construction_H04378.png)
+![](figures/herat/05_destruction_H00873.png)
+![](figures/herat/08_soil_sealing_H05950.png)
+
+## 6. Evaluation code
 
 - `tools/eval_splits.py`: the five-split model selection reported in METHOD.md (trees / pair model / stacked, per-class F1, pooled confusion).
 - `tools/score.py`: the organisers' metric on a labelled point file with a `split` column (macro-F1 in / out of domain, harmonic mean S, spatial-cell bootstrap, paired comparison of two submissions).
