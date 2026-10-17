@@ -1,0 +1,15 @@
+# imagery, caches and outputs (chips, features, embeddings, logs)
+imagery/
+*.tif
+work/
+cache*/
+*.npz
+*.out
+
+# Python
+__pycache__/
+*.pyc
+
+# OS
+Thumbs.db
+.DS_Store
