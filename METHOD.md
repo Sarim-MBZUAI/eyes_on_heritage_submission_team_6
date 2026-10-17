@@ -12,7 +12,7 @@ Each test point gets one of `construction`, `destruction`, `soil_sealing`, `no_c
 
 The ranking score is **S = 2·M_in·M_out / (M_in + M_out)**. It stays close to the weaker of the two, so **transfer to an unseen city matters more than fitting the seen ones**. Every class counts equally, so the rare `destruction` (63 labels) and `soil_sealing` (64) classes matter as much as `no_change` (406).
 
-> ⚠️ **Fairness note.** Team 7's own Damascus annotations (on the `main` branch) are very likely part of the hidden test set. The model must **not** train on them, and Damascus imagery should not be used for tuning either. The pipeline only reads `train_annotations.geojson`.
+> ⚠️ **Fairness note.** Our own Damascus annotations are very likely part of the hidden test set. The model must **not** train on them, and Damascus imagery should not be used for tuning either. The pipeline only reads `train_annotations.geojson`.
 
 ## Data
 
